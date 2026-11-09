@@ -1,30 +1,17 @@
-# Données
+# Données brutes
 
-## Les fichiers communs (à utiliser par tout le monde)
-
-Télécharger depuis le Drive de l'équipe et poser dans ce dossier `data/` :
-
-- `sequences.parquet`
-- `counts.parquet`
-- `templates.csv`
-- `MANIFEST.txt`
-
-Lien du Drive : (à ajouter)
-
-Ne pas modifier ces fichiers et ne pas refaire son propre découpage.
-Pour vérifier qu'on a les bons fichiers, comparer les empreintes MD5 de `MANIFEST.txt`.
-
-## Les données brutes (seulement pour refaire les fichiers communs)
+Ce dossier contient les données brutes de Loghub. Elles sont trop grosses pour Git : chacun les télécharge
+s'il en a besoin. Pour l'étape 1, la plupart des membres n'en ont pas besoin : les fichiers communs prêts à
+l'emploi sont décrits dans `hdfs_v1/README.md`.
 
 Loghub (https://github.com/logpai/loghub) renvoie vers Zenodo : https://zenodo.org/records/8196385
 
-- `HDFS_v1.zip` (187 Mo) : à extraire dans `data/HDFS_v1/` (contient HDFS.log et preprocessed/)
-- `HDFS_v3_TraceBench.zip` (567 Mo) : pour la deuxième partie du projet, dans `data/HDFS_v3_TraceBench/`
+| Fichier sur Zenodo | Taille | À extraire dans | Sert à |
+|---|---|---|---|
+| `HDFS_v1.zip` | 187 Mo | `data/HDFS_v1/` (contient HDFS.log et preprocessed/) | étape 1, fabriquer les fichiers communs |
+| `HDFS_v3_TraceBench.zip` | 567 Mo | `data/HDFS_v3_TraceBench/` | étape 2 |
 
-Ces dossiers sont trop gros pour Git : ils sont ignorés par `.gitignore`.
+## Fichiers communs de l'étape 1
 
-Pour refaire les fichiers communs à partir de `data/HDFS_v1/` :
-
-```
-python scripts/preparer_donnees.py
-```
+`sequences.parquet` et `counts.parquet` sont sur le Drive de l'équipe : (lien à ajouter)
+Ils se posent dans `hdfs_v1/data/`.
