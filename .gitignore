@@ -1,9 +1,10 @@
-# Données brutes et gros fichiers : partagés par Drive, jamais par Git
+# Données brutes : téléchargées par chacun, jamais dans Git
 /data/HDFS_v1
 /data/HDFS_v3_TraceBench
-/data/raw/
-/data/*.parquet
 /data/*.zip
+
+# Fichiers communs lourds : partagés par le Drive
+*.parquet
 *.log
 
 # Environnements et fichiers temporaires
