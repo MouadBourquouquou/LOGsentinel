@@ -1,2 +1,18 @@
+# Données brutes et gros fichiers : partagés par Drive, jamais par Git
 /data/HDFS_v1
 /data/HDFS_v3_TraceBench
+/data/raw/
+/data/*.parquet
+/data/*.zip
+*.log
+
+# Environnements et fichiers temporaires
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Modèles entraînés
+*.pt
+*.pkl
+*.joblib
