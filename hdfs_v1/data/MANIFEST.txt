@@ -1,0 +1,17 @@
+Fichiers communs LogSentinel, HDFS_v1, générés le 2026-11-09 15:56
+Source : C:\Users\l\Desktop\Genie Info\S1\AI\logSentinel\app\LOGsentinel\data\HDFS_v1
+
+Découpage : blocs rangés par première apparition dans HDFS.log, puis 70 % train, 15 % val, 15 % test
+
+train :  402542 blocs,  13115 anomalies (3.26 %)
+val   :   86259 blocs,   2607 anomalies (3.02 %)
+test  :   86260 blocs,   1116 anomalies (1.29 %)
+total : 575061 blocs, 16838 anomalies
+longueurs : min 2, médiane 19, max 298
+événements présents : 29 (de E1 à E29)
+blocs avec au moins un WARN : 134240, avec ERROR : 0
+
+Empreintes MD5 (doivent être identiques chez tout le monde) :
+  sequences.parquet  069152e56a4e0da97d945b7aa6048fbf
+  counts.parquet     f502a3ee6dd05f1f482caaeeb17be2d4
+  templates.csv      3a6e0d99f388e520671ed08e70f15e2b
