@@ -1,7 +1,7 @@
 # LOGsentinel
 
 Projet d'intelligence artificielle, Génie Informatique 5e année, ENSA Marrakech.
-Équipe : Mouad, Assia, Oumnia, Abdelghany, Reda, Rida.
+Équipe : Mouad, Assia, Oumnia, Abdelghani, Reda, Rida.
 
 LOGsentinel lit les logs d'un cluster Hadoop, apprend le comportement normal et lève des alertes expliquées.
 Règle des encadrants : nous entraînons nos propres modèles (pas d'appel à une API, pas d'IA générative).

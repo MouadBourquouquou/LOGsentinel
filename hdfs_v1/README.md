@@ -23,7 +23,7 @@ F1 sur la partie test, calculé uniquement par `evaluate.py`. Mis à jour avec `
 | 2 | Assia | Isolation Forest | counts | 0,802 | à faire |
 | 2 | Assia | One-Class SVM | counts | 0,363 | à faire |
 | 3 | Oumnia | Invariant Mining | counts | 0,915 | à faire |
-| 4 | Abdelghany | DeepLog (LSTM) | sequences | 0,96 | à faire |
+| 4 | Abdelghani | DeepLog (LSTM) | sequences | 0,96 | à faire |
 | 5 | Reda | Autoencodeur LSTM | sequences | pas de repère | en cours |
 | 6 | Rida | Arbre de décision (supervisé, référence) | counts | 0,998 | à faire |
 | 6 | Rida | Forêt aléatoire (supervisé, référence) | counts | pas de repère | à faire |
@@ -41,7 +41,7 @@ le nôtre, seuls nos chiffres comptent pour la comparaison. Chacun met à jour s
    .venv\Scripts\activate
    pip install -r requirements.txt
    ```
-   (dans Git Bash : `source .venv/Scripts/activate`). Abdelghany et Reda installent aussi PyTorch :
+   (dans Git Bash : `source .venv/Scripts/activate`). Abdelghani et Reda installent aussi PyTorch :
    `pip install torch --index-url https://download.pytorch.org/whl/cpu`
 2. Télécharger depuis le Drive `sequences.parquet` et `counts.parquet` et les poser dans `hdfs_v1/data/`
    (`templates.csv` et `MANIFEST.txt` y sont déjà, via Git).
@@ -67,7 +67,7 @@ hdfs_v1/
 | Fichier | Une ligne = | Colonnes | Pour qui |
 |---|---|---|---|
 | `counts.parquet` | un bloc | block_id, label (0 normal, 1 anomalie), split, E1 à E30, n_warn, n_error, length, n_unique, duration_s | Mouad, Assia, Oumnia, Rida |
-| `sequences.parquet` | un bloc | block_id, label, split, events (liste ordonnée des événements, de 1 à 30) | Abdelghany, Reda |
+| `sequences.parquet` | un bloc | block_id, label, split, events (liste ordonnée des événements, de 1 à 30) | Abdelghani, Reda |
 | `templates.csv` | un événement | num, texte (par exemple 5 = « Receiving block ... ») | tout le monde, pour expliquer les alertes |
 | `MANIFEST.txt` | | blocs et anomalies par partie, empreintes MD5 | vérifier qu'on a tous les mêmes fichiers |
 
