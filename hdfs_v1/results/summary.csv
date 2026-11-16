@@ -1,0 +1,2 @@
+date,member,model,precision,recall,f1,VP,FP,FN,VN,n_test,n_anomalies,train_time_min,pred_time_s,machine,pred_file
+2026-11-16 16:14,Oumnia,Invariant Mining,0.714,1.0,0.8331,1116,447,0,84697,86260,1116,0.18,0.16,"Dell Precision 5540, i7-9850H, 32 Go RAM, Quadro T1000",invariant_mining_test.csv
