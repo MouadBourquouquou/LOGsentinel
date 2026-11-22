@@ -12,7 +12,7 @@ F1 sur la partie test, calculé uniquement par `evaluate.py`. Mis à jour avec `
 
 | Rang | Membre | Modèle | Précision | Rappel | F1 | Temps d'entraînement (min) |
 |---|---|---|---|---|---|---|
-| | | aucun modèle noté pour l'instant | | | | |
+| 1 | Reda | Autoencodeur LSTM | 0.534 | 0.685 | 0.600 | 102.1 |
 
 ### Répartition et repères publiés
 
@@ -24,7 +24,7 @@ F1 sur la partie test, calculé uniquement par `evaluate.py`. Mis à jour avec `
 | 2 | Assia | One-Class SVM | counts | 0,363 | à faire |
 | 3 | Oumnia | Invariant Mining | counts | 0,915 | à faire |
 | 4 | Abdelghani | DeepLog (LSTM) | sequences | 0,96 | à faire |
-| 5 | Reda | Autoencodeur LSTM | sequences | pas de repère | en cours |
+| 5 | Reda | Autoencodeur LSTM | sequences | pas de repère | fait |
 | 6 | Rida | Arbre de décision (supervisé, référence) | counts | 0,998 | à faire |
 | 6 | Rida | Forêt aléatoire (supervisé, référence) | counts | pas de repère | à faire |
 | 6 | Rida | Combinaison finale (vote des meilleurs) | | | à faire |
