@@ -4,3 +4,9 @@ pyarrow
 scikit-learn
 matplotlib
 jupyter
+
+ipykernel
+numpy
+pandas
+scikit-learn
+pyarrow 
