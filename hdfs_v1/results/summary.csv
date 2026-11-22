@@ -1,0 +1,2 @@
+date,member,model,precision,recall,f1,VP,FP,FN,VN,n_test,n_anomalies,train_time_min,pred_time_s,machine,pred_file
+2026-11-22 20:00,Reda,Autoencodeur LSTM,0.5339,0.6846,0.5999,764,667,352,84477,86260,1116,102.1,24.3,"PC portable, CPU",autoencodeur_lstm_test.csv
