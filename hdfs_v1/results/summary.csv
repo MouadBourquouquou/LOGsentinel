@@ -3,3 +3,6 @@ date,member,model,precision,recall,f1,VP,FP,FN,VN,n_test,n_anomalies,train_time_
 2026-11-22 21:35,Oumnia,Invariant Mining,0.714,1.0,0.8331,1116,447,0,84697,86260,1116,0.19,0.12,"Dell Precision 5540, i7-9850H, 32 Go RAM, Quadro T1000",invariant_mining_test.csv
 2026-11-23 11:53,Assia,Isolation Forest,0.1971,0.06,0.092,67,273,1049,84871,86260,1116,0.02,0.3,"Mon PC, CPU",isolation_forest_test.csv
 2026-11-23 11:56,Assia,One-Class SVM,0.9323,1.0,0.965,1116,81,0,85063,86260,1116,0.01,0.2,"Mon PC, CPU",one_class_svm_test.csv
+2026-11-23 07:05,Mouad,Comptage des WARN,1.0,0.1801,0.3052,201,0,915,85144,86260,1116,0.0,0.238752,"Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",comptage_warn_test.csv
+2026-11-23 07:06,Mouad,PCA,0.8864,1.0,0.9398,1116,143,0,85001,86260,1116,0.009157,0.414055,"Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",pca_test.csv
+

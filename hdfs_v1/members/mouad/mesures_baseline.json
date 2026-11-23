@@ -1,0 +1,19 @@
+{
+  "modele": "Comptage des WARN",
+  "membre": "Mouad",
+  "regle": "score = n_warn ; pred = 1 si n_warn > 0",
+  "seuil": 0,
+  "validation": {
+    "precision": 1.0,
+    "rappel": 0.5600306866129651,
+    "f1": 0.7179739365625769,
+    "VP": 1460,
+    "FP": 0,
+    "FN": 1147,
+    "VN": 83652
+  },
+  "train_time_min": 0.0,
+  "pred_time_s": 0.238752,
+  "machine": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+  "fichier": "comptage_warn_test.csv"
+}
