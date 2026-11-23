@@ -1,0 +1,20 @@
+{
+    "model": "RandomForest",
+    "n_estimators": 300,
+    "max_depth": 10,
+    "threshold": 0.05125965573876187,
+    "train_time_seconds": 41.27737987499995,
+    "precision": 0.9163444639718805,
+    "recall": 1.0,
+    "f1": 0.9563462949376376,
+    "confusion_matrix": [
+        [
+            83414,
+            238
+        ],
+        [
+            0,
+            2607
+        ]
+    ]
+}
