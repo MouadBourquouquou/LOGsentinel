@@ -69,7 +69,7 @@ Le détail du travail de chaque membre est dans son dossier `members/<prenom>/re
    (dans Git Bash : `source .venv/Scripts/activate`). Abdelghani et Rida installent aussi PyTorch :
    `pip install torch --index-url https://download.pytorch.org/whl/cpu`, et Rida PyTorch Geometric :
    `pip install torch_geometric`.
-3. Télécharger depuis le Drive (dossier `donnees/hdfs_v3/`) `traces.parquet`, `etapes.parquet` et
+3. Télécharger depuis le Drive (dossier `LOGsentinel donnees HDFS_v3`) `traces.parquet`, `etapes.parquet` et
    `aretes.parquet`, et les poser dans `hdfs_v3/data/` (`vocabulaire.json` et `MANIFEST.txt` y sont déjà, via Git).
 4. Vérifier les empreintes MD5 avec celles de `data/MANIFEST.txt`.
 5. Travailler dans son dossier `hdfs_v3/members/<prenom>/`.
@@ -160,7 +160,8 @@ il sert au remplissage quand on coupe ou complète les suites à une même longu
 7. Le score officiel se calcule uniquement avec `evaluate.py` de l'étape 2.
 8. Personne ne modifie `evaluate.py` ni les fichiers de `data/` sans prévenir le groupe.
 9. Les modèles entraînés (.joblib, .pkl, .pt) ne vont pas dans Git. Ceux retenus à la fin vont sur le Drive,
-   dans `modeles/hdfs_v3/`, nommés `hdfs_v3_<modele>_<prenom>.<extension>`.
+   dans le dossier `LOGsentinel modeles HDFS_v3` (à créer à côté de `LOGsentinel modeles HDFS_v1`), nommés
+   `hdfs_v3_<modele>_<prenom>.<extension>`.
 
 ## Exemple de code (modèle sur les caractéristiques)
 

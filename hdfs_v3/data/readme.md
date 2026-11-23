@@ -2,9 +2,9 @@
 
 | Fichier | Où le trouver |
 |---|---|
-| `traces.parquet` | Drive, dossier `donnees/hdfs_v3/` |
-| `etapes.parquet` | Drive, dossier `donnees/hdfs_v3/` |
-| `aretes.parquet` | Drive, dossier `donnees/hdfs_v3/` |
+| `traces.parquet` | Drive, dossier `LOGsentinel donnees HDFS_v3` |
+| `etapes.parquet` | Drive, dossier `LOGsentinel donnees HDFS_v3` |
+| `aretes.parquet` | Drive, dossier `LOGsentinel donnees HDFS_v3` |
 | `vocabulaire.json` | ici, via Git |
 | `MANIFEST.txt` | ici, via Git |
 

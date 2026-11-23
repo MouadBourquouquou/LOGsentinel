@@ -13,10 +13,11 @@ Loghub (https://github.com/logpai/loghub) renvoie vers Zenodo : https://zenodo.o
 
 ## Fichiers communs de l'étape 1
 
-`sequences.parquet` et `counts.parquet` sont sur le Drive de l'équipe : [drive.google.com/drive/folders/1jw9dRFJlOsp-O61vgRrY3MkNu2AtC9oL?usp=sharing](https://drive.google.com/drive/folders/1jw9dRFJlOsp-O61vgRrY3MkNu2AtC9oL?usp=sharing)
+`sequences.parquet` et `counts.parquet` sont sur le Drive de l'équipe « AI Project: LOGsentinel », dans le dossier
+`LOGsentinel donnees HDFS_v1` : [drive.google.com/drive/folders/1jw9dRFJlOsp-O61vgRrY3MkNu2AtC9oL?usp=sharing](https://drive.google.com/drive/folders/1jw9dRFJlOsp-O61vgRrY3MkNu2AtC9oL?usp=sharing)
 Ils se posent dans `hdfs_v1/data/`.
 
 ## Fichiers communs de l'étape 2
 
-`traces.parquet`, `etapes.parquet` et `aretes.parquet` sont sur le même Drive, dans le dossier `donnees/hdfs_v3/`.
+`traces.parquet`, `etapes.parquet` et `aretes.parquet` sont sur le même Drive, dans le dossier `LOGsentinel donnees HDFS_v3`.
 Ils se posent dans `hdfs_v3/data/`. Pour les refaire, pas besoin d'extraire `HDFS_v3_TraceBench.zip` : le script le lit directement.

@@ -48,7 +48,7 @@ le nôtre, seuls nos chiffres comptent pour la comparaison. Chacun met à jour s
    ```
    (dans Git Bash : `source .venv/Scripts/activate`). Abdelghani et Reda installent aussi PyTorch :
    `pip install torch --index-url https://download.pytorch.org/whl/cpu`
-2. Télécharger depuis le Drive `sequences.parquet` et `counts.parquet` et les poser dans `hdfs_v1/data/`
+2. Télécharger depuis le Drive (dossier `LOGsentinel donnees HDFS_v1`) `sequences.parquet` et `counts.parquet` et les poser dans `hdfs_v1/data/`
    (`templates.csv` et `MANIFEST.txt` y sont déjà, via Git).
 3. Travailler dans son dossier `hdfs_v1/members/<prenom>/`.
 

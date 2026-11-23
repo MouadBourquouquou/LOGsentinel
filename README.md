@@ -37,7 +37,8 @@ LOGsentinel/
 ## Règles de travail
 
 - Un dossier par membre dans chaque étape (`hdfs_v1/members/<prenom>/`).
-- Les gros fichiers de données passent par le Drive, pas par Git.
+- Les gros fichiers passent par le Drive « AI Project: LOGsentinel », pas par Git : un dossier par usage et par
+  étape (`LOGsentinel donnees HDFS_v1`, `LOGsentinel donnees HDFS_v3`, `LOGsentinel modeles HDFS_v1`...).
 - Un commit = une modification avec un rôle clair, et un message qui le dit.
 - Personne ne modifie les fichiers communs (`evaluate.py`, les fichiers de données) sans prévenir le groupe.
 - Un point d'équipe chaque semaine ; un membre bloqué plus d'un jour le dit tout de suite.
