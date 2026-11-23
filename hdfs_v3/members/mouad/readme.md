@@ -3,7 +3,7 @@
 ## One-Class SVM par type de panne
 
 - Idée : pour chaque type de panne, une frontière autour des traces de ce type.
-- Données : les caractéristiques résumées, mises à l'échelle (StandardScaler appris sur train).
+- Données : `traces.parquet` (`colonnes_caract()`), mises à l'échelle (StandardScaler appris sur train).
 - Entraînement : un One-Class SVM par type, sur les traces de train de ce type.
 - Prédiction : score de chaque modèle (`decision_function`) ; la trace va au type pour lequel elle est le
   plus à l'intérieur de la frontière.
@@ -24,9 +24,8 @@
 
 ## Avant de commencer
 
-Attendre les fichiers communs de l'étape 2 (voir `hdfs_v3/data/readme.md`). Les règles communes sont dans
-`hdfs_v3/README.md` : découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec
-`evaluate.py`, F1 macro comme mesure principale.
+Lire `hdfs_v3/README.md` : comment démarrer, contenu des fichiers communs, exemple de code, règles
+(découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec `evaluate.py`, F1 macro).
 
 ## Ce que je rends
 

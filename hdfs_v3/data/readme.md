@@ -1,11 +1,15 @@
 # Fichiers communs de l'étape 2
 
-Ce dossier recevra les fichiers communs de l'étape 2, préparés à partir de `data/HDFS_v3_TraceBench.zip` :
+| Fichier | Où le trouver |
+|---|---|
+| `traces.parquet` | Drive, dossier `donnees/hdfs_v3/` |
+| `etapes.parquet` | Drive, dossier `donnees/hdfs_v3/` |
+| `aretes.parquet` | Drive, dossier `donnees/hdfs_v3/` |
+| `vocabulaire.json` | ici, via Git |
+| `MANIFEST.txt` | ici, via Git |
 
-- les traces anormales, une ligne par trace : caractéristiques résumées, type de panne, partie (train, val, test) ;
-- la suite des étapes de chaque trace, dans l'ordre (membre 4) ;
-- les traces sous forme de graphes : étapes comme nœuds, liens parent enfant comme arêtes (membre 5) ;
-- un MANIFEST avec le nombre de traces par type et par partie, et les empreintes des fichiers.
+Les trois fichiers .parquet se posent dans ce dossier. Leur contenu est décrit dans `hdfs_v3/README.md`,
+partie « Les fichiers communs ». Leurs empreintes MD5 sont à la fin de `MANIFEST.txt` : elles doivent être
+identiques chez tout le monde.
 
-Ils ne sont pas encore publiés. Leur contenu exact sera décrit ici quand ils seront poussés.
-Les fichiers lourds passeront par le Drive (dossier `donnees/hdfs_v3/`), comme à l'étape 1.
+Ils sont fabriqués par `scripts/preparer_donnees.py` à partir de `data/HDFS_v3_TraceBench.zip`.

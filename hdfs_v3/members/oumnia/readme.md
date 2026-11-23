@@ -4,7 +4,8 @@
 
 - Idée : trouver les règles toujours vraies pour un type de panne (par exemple « autant de réceptions que
   d'envois »). Le code de l'étape 1 (`hdfs_v1/algorithmes/invariant_mining.py`) peut être repris.
-- Données : les comptages des types d'étapes par trace.
+- Données : les colonnes `op_...` (nombre d'étapes de chaque opération) et `err_...` (nombre d'étapes de
+  chaque type d'erreur) de `traces.parquet`.
 - Entraînement : pour chaque type, les invariants respectés par les traces de train de ce type.
 - Prédiction : la trace va au type dont elle respecte le mieux les règles.
 - Intérêt : le modèle le plus explicable ; ses règles pourront servir au texte des alertes.
@@ -24,9 +25,8 @@
 
 ## Avant de commencer
 
-Attendre les fichiers communs de l'étape 2 (voir `hdfs_v3/data/readme.md`). Les règles communes sont dans
-`hdfs_v3/README.md` : découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec
-`evaluate.py`, F1 macro comme mesure principale.
+Lire `hdfs_v3/README.md` : comment démarrer, contenu des fichiers communs, exemple de code, règles
+(découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec `evaluate.py`, F1 macro).
 
 ## Ce que je rends
 

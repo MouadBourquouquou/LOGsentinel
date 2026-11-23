@@ -4,7 +4,7 @@
 
 - Idée : un PCA appris sur les traces de chaque type de panne. Chaque PCA reconstruit bien les traces de
   son type et mal les autres.
-- Données : les caractéristiques résumées des traces.
+- Données : `traces.parquet`, colonnes données par `colonnes_caract()`.
 - Entraînement : StandardScaler appris sur train, puis un PCA par type, sur les traces de train de ce type.
 - Prédiction : erreur de reconstruction de la trace avec chaque PCA ; la trace va au type dont l'erreur est
   la plus petite.
@@ -19,9 +19,8 @@
 
 ## Avant de commencer
 
-Attendre les fichiers communs de l'étape 2 (voir `hdfs_v3/data/readme.md`). Les règles communes sont dans
-`hdfs_v3/README.md` : découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec
-`evaluate.py`, F1 macro comme mesure principale.
+Lire `hdfs_v3/README.md` : comment démarrer, contenu des fichiers communs, exemple de code, règles
+(découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec `evaluate.py`, F1 macro).
 
 ## Ce que je rends
 

@@ -11,7 +11,7 @@ Règle des encadrants : nous entraînons nos propres modèles (pas d'appel à un
 | Étape | Contenu | Dossier | État |
 |---|---|---|---|
 | 1. Choix des modèles sur HDFS_v1 | chaque membre entraîne et teste un ou deux modèles sur les mêmes données ; on compare et on garde les 2 ou 3 meilleurs | [`hdfs_v1/`](hdfs_v1/) | presque fini (DeepLog et Rida à noter) |
-| 2. Diagnostic sur HDFS_v3 | sur les traces HDFS_v3, trouver le type de panne des blocs que l'étape 1 a détectés comme anormaux | [`hdfs_v3/`](hdfs_v3/) | en préparation |
+| 2. Diagnostic sur HDFS_v3 | sur les traces HDFS_v3, trouver le type de panne des blocs que l'étape 1 a détectés comme anormaux | [`hdfs_v3/`](hdfs_v3/) | prêt à démarrer |
 | 3. Application LOGsentinel | les modèles retenus intégrés dans l'outil final, avec les alertes expliquées | à créer | à faire |
 
 ## Où on en est (23 novembre 2026)
@@ -20,7 +20,8 @@ Règle des encadrants : nous entraînons nos propres modèles (pas d'appel à un
 - Fait : outils communs de l'étape 1 (préparation des données, `evaluate.py`, `donnees.py`).
 - Fait : fichiers communs de l'étape 1 sur le Drive ; 6 modèles HDFS_v1 notés (classement dans [`hdfs_v1/README.md`](hdfs_v1/README.md)).
 - En cours : DeepLog (Abdelghani) et les modèles de Rida pour l'étape 1.
-- En préparation : fichiers communs de l'étape 2 ; répartition des modèles HDFS_v3 dans [`hdfs_v3/README.md`](hdfs_v3/README.md).
+- Fait : fichiers communs de l'étape 2 (28 419 traces anormales, 11 types de panne) et `evaluate.py` en F1 macro.
+- Prêt à démarrer : entraînement des modèles HDFS_v3, répartition dans [`hdfs_v3/README.md`](hdfs_v3/README.md).
 
 Le détail de l'étape 1 (règles, utilisation, répartition, classement des modèles) est dans [`hdfs_v1/README.md`](hdfs_v1/README.md).
 

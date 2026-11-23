@@ -4,7 +4,8 @@
 
 - Idée : le réseau lit les étapes de la trace dans l'ordre et donne le type de panne à la fin, comme DeepLog
   lisait les événements à l'étape 1.
-- Données : la suite des étapes de chaque trace (type d'étape, durée, statut).
+- Données : `etapes.parquet` (`charger_etapes()`) : listes `ops`, `roles`, `durees_ms`, `erreurs` par trace.
+  Le numéro 0 est libre dans `ops` pour le remplissage.
 - Préparation : couper ou compléter les suites à une longueur fixe L, choisie d'après les traces de train.
 - Modèle : embedding du type d'étape, couche GRU (ou LSTM), couche de sortie avec une probabilité par type.
 - Entraînement : poids de classe, arrêt anticipé quand le F1 macro sur val ne progresse plus.
@@ -13,15 +14,15 @@
 ## MLP
 
 - Idée : un réseau simple sur les caractéristiques résumées, sans l'ordre des étapes.
+- Données : `traces.parquet` (`colonnes_caract()`), mises à l'échelle.
 - Entraînement : MLPClassifier (scikit-learn) ou un petit réseau PyTorch.
 - Intérêt : si le GRU fait nettement mieux, l'ordre des étapes aide au diagnostic ; sinon, les
   caractéristiques résumées suffisent. Les deux résultats servent au rapport.
 
 ## Avant de commencer
 
-Attendre les fichiers communs de l'étape 2 (voir `hdfs_v3/data/readme.md`). Les règles communes sont dans
-`hdfs_v3/README.md` : découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec
-`evaluate.py`, F1 macro comme mesure principale.
+Lire `hdfs_v3/README.md` : comment démarrer, contenu des fichiers communs, exemple de code, règles
+(découpage fourni, graine 42, réglages sur val, un seul passage sur test, score avec `evaluate.py`, F1 macro).
 
 ## Ce que je rends
 
