@@ -12,19 +12,23 @@ F1 sur la partie test, calculé uniquement par `evaluate.py`. Mis à jour avec `
 
 | Rang | Membre | Modèle | Précision | Rappel | F1 | Temps d'entraînement (min) |
 |---|---|---|---|---|---|---|
-| 1 | Reda | Autoencodeur LSTM | 0.714 | 1.000 | 0.833 | 0.19 |
-| 2 | Oumnia | Invariant Mining | 0.534 | 0.685 | 0.600 | 102.1 |
+| 1 | Assia | One-Class SVM | 0.932 | 1.000 | 0.965 | 0.01 |
+| 2 | Mouad | PCA | 0.886 | 1.000 | 0.940 | 0.009157 |
+| 3 | Oumnia | Invariant Mining | 0.714 | 1.000 | 0.833 | 0.19 |
+| 4 | Reda | Autoencodeur LSTM | 0.534 | 0.685 | 0.600 | 102.1 |
+| 5 | Mouad | Comptage des WARN | 1.000 | 0.180 | 0.305 | 0 |
+| 6 | Assia | Isolation Forest | 0.197 | 0.060 | 0.092 | 0.02 |
 
 ### Répartition et repères publiés
 
 | # | Membre | Modèle(s) | Fichier lu | Repère publié (F1) | État |
 |---|---|---|---|---|---|
-| 1 | Mouad | Comptage des ERROR (base) | counts | pas de repère | à faire |
-| 1 | Mouad | PCA | counts | 0,769 | à faire |
-| 2 | Assia | Isolation Forest | counts | 0,802 | à faire |
-| 2 | Assia | One-Class SVM | counts | 0,363 | à faire |
+| 1 | Mouad | Comptage des WARN (base, aucun bloc n'a de ligne ERROR) | counts | pas de repère | fait |
+| 1 | Mouad | PCA | counts | 0,769 | fait |
+| 2 | Assia | Isolation Forest | counts | 0,802 | fait |
+| 2 | Assia | One-Class SVM | counts | 0,363 | fait |
 | 3 | Oumnia | Invariant Mining | counts | 0,915 | fait |
-| 4 | Abdelghani | DeepLog (LSTM) | sequences | 0,96 | à faire |
+| 4 | Abdelghani | DeepLog (LSTM) | sequences | 0,96 | en cours (code poussé, pas encore noté) |
 | 5 | Reda | Autoencodeur LSTM | sequences | pas de repère | fait |
 | 6 | Rida | Arbre de décision (supervisé, référence) | counts | 0,998 | à faire |
 | 6 | Rida | Forêt aléatoire (supervisé, référence) | counts | pas de repère | à faire |
