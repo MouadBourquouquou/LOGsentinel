@@ -1,0 +1,24 @@
+{
+  "modele": "PCA",
+  "membre": "Mouad",
+  "preprocessing": "brut",
+  "parametre_pca": 10,
+  "nature_composantes": "entier",
+  "n_composantes": 10,
+  "variance_cumulee": 0.9999992936264809,
+  "seuil": 5.646577812553519e-11,
+  "validation": {
+    "precision": 0.982279500604108,
+    "rappel": 0.9355581127733027,
+    "f1": 0.9583497053045187,
+    "VP": 2439,
+    "FP": 44,
+    "FN": 168,
+    "VN": 83608
+  },
+  "train_time_s": 0.549433,
+  "train_time_min": 0.009157,
+  "pred_time_s": 0.414055,
+  "machine": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+  "fichier": "pca_test.csv"
+}
