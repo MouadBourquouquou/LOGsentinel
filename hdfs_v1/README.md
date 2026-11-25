@@ -6,31 +6,33 @@ script de score. On compare tout dans un seul tableau, puis on garde les 2 ou 3 
 La question posée à chaque modèle : « ce bloc HDFS se comporte-t-il normalement ? ». Toutes les lignes de log
 qui citent le même identifiant `blk_...` forment un bloc, l'unité que chaque modèle juge.
 
-
 ## Classement actuel
 
 F1 sur la partie test, calculé uniquement par `evaluate.py`. Mis à jour avec `python scripts/classement.py`.
 
 | Rang | Membre | Modèle | Précision | Rappel | F1 | Temps d'entraînement (min) |
 |---|---|---|---|---|---|---|
-| 1 | Oumnia | Invariant Mining | 0.714 | 1.000 | 0.833 | 0.18 |
-
+| 1 | Assia | One-Class SVM | 0.932 | 1.000 | 0.965 | 0.01 |
+| 2 | Mouad | PCA | 0.886 | 1.000 | 0.940 | 0.009157 |
+| 3 | Oumnia | Invariant Mining | 0.714 | 1.000 | 0.833 | 0.19 |
+| 4 | Reda | Autoencodeur LSTM | 0.534 | 0.685 | 0.600 | 102.1 |
+| 5 | Mouad | Comptage des WARN | 1.000 | 0.180 | 0.305 | 0 |
+| 6 | Assia | Isolation Forest | 0.197 | 0.060 | 0.092 | 0.02 |
 
 ### Répartition et repères publiés
 
 | # | Membre | Modèle(s) | Fichier lu | Repère publié (F1) | État |
 |---|---|---|---|---|---|
-| 1 | Mouad | Comptage des ERROR (base) | counts | pas de repère | à faire |
-| 1 | Mouad | PCA | counts | 0,769 | à faire |
-| 2 | Assia | Isolation Forest | counts | 0,802 | à faire |
-| 2 | Assia | One-Class SVM | counts | 0,363 | à faire |
-| 3 | Oumnia | Invariant Mining | counts | 0,833 | terminé |
-| 4 | Abdelghany | DeepLog (LSTM) | sequences | 0,96 | à faire |
-| 5 | Reda | Autoencodeur LSTM | sequences | pas de repère | en cours |
+| 1 | Mouad | Comptage des WARN (base, aucun bloc n'a de ligne ERROR) | counts | pas de repère | fait |
+| 1 | Mouad | PCA | counts | 0,769 | fait |
+| 2 | Assia | Isolation Forest | counts | 0,802 | fait |
+| 2 | Assia | One-Class SVM | counts | 0,363 | fait |
+| 3 | Oumnia | Invariant Mining | counts | 0,915 | fait |
+| 4 | Abdelghani | DeepLog (LSTM) | sequences | 0,96 | en cours (code poussé, pas encore noté) |
+| 5 | Reda | Autoencodeur LSTM | sequences | pas de repère | fait |
 | 6 | Rida | Arbre de décision (supervisé, référence) | counts | 0,998 | à faire |
 | 6 | Rida | Forêt aléatoire (supervisé, référence) | counts | pas de repère | à faire |
 | 6 | Rida | Combinaison finale (vote des meilleurs) | | | à faire |
-
 
 Repères : article Loghub (Zhu et al., ISSRE 2023) pour PCA, Isolation Forest, One-Class SVM, Invariant Mining
 et l'arbre ; Du et al. (CCS 2017) pour DeepLog. Ils sont donnés à titre indicatif : leur découpage n'est pas
@@ -44,9 +46,9 @@ le nôtre, seuls nos chiffres comptent pour la comparaison. Chacun met à jour s
    .venv\Scripts\activate
    pip install -r requirements.txt
    ```
-   (dans Git Bash : `source .venv/Scripts/activate`). Abdelghany et Reda installent aussi PyTorch :
+   (dans Git Bash : `source .venv/Scripts/activate`). Abdelghani et Reda installent aussi PyTorch :
    `pip install torch --index-url https://download.pytorch.org/whl/cpu`
-2. Télécharger depuis le Drive `sequences.parquet` et `counts.parquet` et les poser dans `hdfs_v1/data/`
+2. Télécharger depuis le Drive (dossier `LOGsentinel donnees HDFS_v1`) `sequences.parquet` et `counts.parquet` et les poser dans `hdfs_v1/data/`
    (`templates.csv` et `MANIFEST.txt` y sont déjà, via Git).
 3. Travailler dans son dossier `hdfs_v1/members/<prenom>/`.
 
@@ -70,7 +72,7 @@ hdfs_v1/
 | Fichier | Une ligne = | Colonnes | Pour qui |
 |---|---|---|---|
 | `counts.parquet` | un bloc | block_id, label (0 normal, 1 anomalie), split, E1 à E30, n_warn, n_error, length, n_unique, duration_s | Mouad, Assia, Oumnia, Rida |
-| `sequences.parquet` | un bloc | block_id, label, split, events (liste ordonnée des événements, de 1 à 30) | Abdelghany, Reda |
+| `sequences.parquet` | un bloc | block_id, label, split, events (liste ordonnée des événements, de 1 à 30) | Abdelghani, Reda |
 | `templates.csv` | un événement | num, texte (par exemple 5 = « Receiving block ... ») | tout le monde, pour expliquer les alertes |
 | `MANIFEST.txt` | | blocs et anomalies par partie, empreintes MD5 | vérifier qu'on a tous les mêmes fichiers |
 

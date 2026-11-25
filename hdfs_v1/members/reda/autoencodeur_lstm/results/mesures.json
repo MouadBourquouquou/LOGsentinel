@@ -1,0 +1,33 @@
+{
+  "seuil": 0.0753999799489975,
+  "val": {
+    "precision": 0.8465824665676077,
+    "rappel": 0.8741848868431147,
+    "f1": 0.8601622947725986,
+    "VP": 2279,
+    "FP": 413,
+    "FN": 328,
+    "VN": 83239
+  },
+  "test": {
+    "precision": 0.5338923829489868,
+    "rappel": 0.6845878136200717,
+    "f1": 0.5999214762465647,
+    "VP": 764,
+    "FP": 667,
+    "FN": 352,
+    "VN": 84477
+  },
+  "reglage": {
+    "latent": 32,
+    "hidden": 128,
+    "L": 35,
+    "L_nom": "p99",
+    "essai": 4,
+    "f1_val_essai": 0.8006
+  },
+  "temps_entrainement_min": 102.1,
+  "temps_prediction_test_s": 24.3,
+  "machine": "cpu",
+  "donnees": "provisoires"
+}

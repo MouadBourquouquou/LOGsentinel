@@ -1,0 +1,44 @@
+Fichiers communs LogSentinel, HDFS_v3 TraceBench, générés le 2026-11-23 23:06
+Source : data/HDFS_v3_TraceBench.zip
+
+Une trace est gardée si au moins une de ses étapes a échoué (règle du script de Loghub : la description
+ne contient ni « success: » ni « a user task »). Son type de panne est celui du dossier où elle se trouve.
+Découpage : 70 % train, 15 % val, 15 % test, stratifié par type de panne, graine 42.
+
+type de panne          label  train    val   test  total
+Data_corruptBlk            0   1840    395    394   2629
+Data_corruptMeta           1   2548    546    546   3640
+Data_cutBlk                2   2657    570    569   3796
+Data_cutMeta               3   2630    563    564   3757
+Data_lossBlk               4   2524    540    541   3605
+Data_lossMeta              5     78     16     17    111
+Net_disconnectDN           6   2570    551    550   3671
+Proc_killDN                7   3060    656    656   4372
+Proc_suspendDN             8   1059    227    227   1513
+Sys_deadDN                 9    410     88     88    586
+Sys_panicDN               10    517    111    111    739
+total                         19893   4263   4263  28419
+
+étapes par trace : min 7, médiane 108, max 420
+opérations différentes : 34, types d'erreur gardés : 38 (+ autre erreur)
+caractéristiques dans traces.parquet : 90
+
+Exclus :
+  0 DataNode en panne : aucune panne injectée :
+    AN_Data_corruptBlk, AN_Data_corruptMeta, AN_Proc_killDN (2)
+  retard de 0 ms : aucune panne injectée :
+    AN_Net_slowHDFS (3)
+  pas un dossier de panne simple (NM = normal, COM = pannes combinées) :
+    COM_Mul_AA (3), COM_Sin_Bug (3), COM_Sin_Data (3), COM_Sin_Net (3), COM_Sin_Proc (3), COM_Sin_Sys (3), NM_CL_r (11), NM_CL_rpc (11), NM_CL_rw (11), NM_CL_rwrpc (11), NM_CL_w (11), NM_DN_r (11), NM_DN_rw (11), NM_DN_w (11)
+  aucune trace avec une étape en échec :
+    AN_Data_lossMeta (8), AN_Net_slowDN (27), AN_Net_slowHDFS (30)
+  seulement 10 traces anormales (minimum 30) :
+    Sys_readOnlyDN
+  seulement 1 traces anormales (minimum 30) :
+    Net_slowDN
+
+Empreintes MD5 (doivent être identiques chez tout le monde) :
+  traces.parquet     63397c12bfefe16c021e016d505f84ae
+  etapes.parquet     bc8d41b1af47ee285dbc7f289ebed8bf
+  aretes.parquet     d3978d9617e11585ddc55b03064db733
+  vocabulaire.json   6d70357841b6509cac62ccb168a97cb4

@@ -1,7 +1,7 @@
 # LOGsentinel
 
 Projet d'intelligence artificielle, Génie Informatique 5e année, ENSA Marrakech.
-Équipe : Mouad, Assia, Oumnia, Abdelghany, Reda, Rida.
+Équipe : Mouad, Assia, Oumnia, Abdelghani, Reda, Rida.
 
 LOGsentinel lit les logs d'un cluster Hadoop, apprend le comportement normal et lève des alertes expliquées.
 Règle des encadrants : nous entraînons nos propres modèles (pas d'appel à une API, pas d'IA générative).
@@ -10,15 +10,18 @@ Règle des encadrants : nous entraînons nos propres modèles (pas d'appel à un
 
 | Étape | Contenu | Dossier | État |
 |---|---|---|---|
-| 1. Choix des modèles sur HDFS_v1 | chaque membre entraîne et teste un ou deux modèles sur les mêmes données ; on compare et on garde les 2 ou 3 meilleurs | [`hdfs_v1/`](hdfs_v1/) | en cours |
-| 2. Détection et diagnostic sur HDFS_v3 | même méthode sur les traces HDFS_v3 (plusieurs types de pannes) | à créer | à faire |
+| 1. Choix des modèles sur HDFS_v1 | chaque membre entraîne et teste un ou deux modèles sur les mêmes données ; on compare et on garde les 2 ou 3 meilleurs | [`hdfs_v1/`](hdfs_v1/) | presque fini (DeepLog et Rida à noter) |
+| 2. Diagnostic sur HDFS_v3 | sur les traces HDFS_v3, trouver le type de panne des blocs que l'étape 1 a détectés comme anormaux | [`hdfs_v3/`](hdfs_v3/) | prêt à démarrer |
 | 3. Application LOGsentinel | les modèles retenus intégrés dans l'outil final, avec les alertes expliquées | à créer | à faire |
 
-## Où on en est (9 novembre 2026)
+## Où on en est (23 novembre 2026)
 
 - Fait : choix des données, cahier des charges, plan de travail HDFS_v1, dépôt Git.
 - Fait : outils communs de l'étape 1 (préparation des données, `evaluate.py`, `donnees.py`).
-- En cours : partage des fichiers communs sur le Drive, entraînement des modèles HDFS_v1.
+- Fait : fichiers communs de l'étape 1 sur le Drive ; 6 modèles HDFS_v1 notés (classement dans [`hdfs_v1/README.md`](hdfs_v1/README.md)).
+- En cours : DeepLog (Abdelghani) et les modèles de Rida pour l'étape 1.
+- Fait : fichiers communs de l'étape 2 (28 419 traces anormales, 11 types de panne) et `evaluate.py` en F1 macro.
+- Prêt à démarrer : entraînement des modèles HDFS_v3, répartition dans [`hdfs_v3/README.md`](hdfs_v3/README.md).
 
 Le détail de l'étape 1 (règles, utilisation, répartition, classement des modèles) est dans [`hdfs_v1/README.md`](hdfs_v1/README.md).
 
@@ -28,12 +31,14 @@ Le détail de l'étape 1 (règles, utilisation, répartition, classement des mod
 LOGsentinel/
   data/          données brutes (HDFS_v1, HDFS_v3_TraceBench), non suivies par Git ; voir data/readme.md
   hdfs_v1/       étape 1 : entraînement et choix des modèles sur HDFS_v1
+  hdfs_v3/       étape 2 : diagnostic du type de panne sur les traces HDFS_v3
 ```
 
 ## Règles de travail
 
 - Un dossier par membre dans chaque étape (`hdfs_v1/members/<prenom>/`).
-- Les gros fichiers de données passent par le Drive, pas par Git.
+- Les gros fichiers passent par le Drive « AI Project: LOGsentinel », pas par Git : un dossier par usage et par
+  étape (`LOGsentinel donnees HDFS_v1`, `LOGsentinel donnees HDFS_v3`, `LOGsentinel modeles HDFS_v1`...).
 - Un commit = une modification avec un rôle clair, et un message qui le dit.
 - Personne ne modifie les fichiers communs (`evaluate.py`, les fichiers de données) sans prévenir le groupe.
 - Un point d'équipe chaque semaine ; un membre bloqué plus d'un jour le dit tout de suite.

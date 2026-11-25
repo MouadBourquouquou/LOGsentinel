@@ -1,0 +1,8 @@
+{
+  "latent": 32,
+  "hidden": 128,
+  "L": 35,
+  "L_nom": "p99",
+  "essai": 4,
+  "f1_val_essai": 0.8006
+}

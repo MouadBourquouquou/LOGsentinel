@@ -2,6 +2,7 @@
 /data/HDFS_v1
 /data/HDFS_v3_TraceBench
 /data/*.zip
+/data/HDFS_v3_cache
 
 # Fichiers communs lourds : partagés par le Drive
 *.parquet
@@ -12,6 +13,7 @@
 venv/
 __pycache__/
 .ipynb_checkpoints/
+*.idea
 
 .idea/
 **/.idea/
